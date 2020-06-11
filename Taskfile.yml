@@ -1,0 +1,16 @@
+# https://taskfile.dev
+
+version: '2'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  install-stringer:
+    cmds:
+      - go get golang.org/x/tools/cmd/stringer
+    silent: true
+  generate:
+    cmds:
+      - go generate ./...
+    silent: true
